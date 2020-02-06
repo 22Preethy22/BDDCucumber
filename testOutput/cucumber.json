@@ -1,0 +1,118 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "validate POST Request for employee rervice api",
+        "description": "",
+        "id": "learning-rest-api-thru-employee-service;validate-post-request-for-employee-rervice-api",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 930574954,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get employee api endpoint",
+            "match": {
+              "location": "APIandUITest.Post_customer_Endpoint()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4020048036,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Post the request with following",
+            "match": {
+              "location": "APIandUITest.post_with_following(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "emp_name",
+                  "emp_name"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "employee_salary",
+                  "35"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "employee_age",
+                  "46"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 118658198,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate the response",
+            "match": {
+              "location": "APIandUITest.validate_response()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1999984896,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 11,
+                "value": "#getting the response of posted id"
+              }
+            ],
+            "line": 12,
+            "name": "I get Request",
+            "match": {
+              "location": "APIandUITest.sendGetRequest()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1778028,
+              "error_message": "java.lang.AssertionError: the post was unsuccessful expected:\u003c404\u003e but was:\u003c200\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat in.com.hcl.stepdefinition.APIandUITest.validate_response(APIandUITest.java:96)\r\n\tat ✽.Then validate the response(in.com.hcl.api.feature:13)\r\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "validate the response",
+            "match": {
+              "location": "APIandUITest.validate_response()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@APItest"
+          }
+        ]
+      }
+    ],
+    "name": "learning rest API thru employee service",
+    "description": "",
+    "id": "learning-rest-api-thru-employee-service",
+    "keyword": "Feature",
+    "uri": "in.com.hcl.api.feature"
+  }
+]
